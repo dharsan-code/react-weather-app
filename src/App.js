@@ -20,9 +20,9 @@ function App() {
   }
 
   const weatherImage = (id) => {
-       if (id >= 200 && id <= 622) return "/images/rainy.png";
-       if (id === 800) return "/images/sunny.png";
-       return "/images/cloudy.png";
+       if (id >= 200 && id <= 622) return `${process.env.PUBLIC_URL}/images/rainy.png`;
+       if (id === 800) return `${process.env.PUBLIC_URL}/images/sunny.png`;
+       return `${process.env.PUBLIC_URL}/images/cloudy.png`;
   }
   return (
     <>
@@ -67,7 +67,7 @@ function App() {
               ) : (
                 <>
                 <div className="d-flex justify-content-center mt-4 card-head">
-                   <img className="img-original" src="/images/cloudy.png" alt="cloudy" />
+                   <img className="img-original" src={`${process.env.PUBLIC_URL}/images/cloudy.png`} alt="cloudy" />
                 </div> 
                     <div className="card-body mt-0"> 
                     <h5 className="card-title">Temperature: 0 °C</h5>
